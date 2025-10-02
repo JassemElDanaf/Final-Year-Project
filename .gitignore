@@ -1,0 +1,20 @@
+# Virtual env
+.venv/
+
+# IDE/OS cruft
+.vscode/
+.DS_Store
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Data & archives (keep big/raw files out of Git)
+data/raw/
+data/interim/
+*.zip
+
+# Gurobi / secrets
+grb.lic
+grb.env
+gurobi.log
+.env
