@@ -1,0 +1,5 @@
+01_prepare_pv_load — meta
+rows=433 homes=5 freq=10min
+unit_fix_x6_applied=False
+timestamp_range=2018-08-23 00:00:00+00:00 .. 2018-08-26 00:00:00+00:00
+homes=['h1', 'h2', 'h3', 'h4', 'h5']
