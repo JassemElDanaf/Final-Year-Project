@@ -40,10 +40,9 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 
-# Data & archives (keep big/raw files out of Git)
-data/raw/
-data/interim/
-*.zip
+# Data & archives
+# If you want to keep raw or interim datasets out of the repo, re-add
+# `data/raw/` or `data/interim/` here. Currently data/ will be tracked.
 
 # Gurobi / secrets
 grb.lic
