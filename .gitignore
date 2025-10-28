@@ -24,9 +24,8 @@ dist/
 .DS_Store
 Thumbs.db
 
-# Data and models (do not upload large raw data or model binaries)
-/data/
-/models/
+# Data and models (tracked by git or Git LFS as requested)
+# If you want to exclude them again, re-add `/data/` or `/models/` here.
 
 # Environments
 .env
