@@ -28,12 +28,16 @@ PRED_DAYS = 1        # prediction length in days
 CADENCE   = "15min"  # set to "10min" if that is your grid
 
 # ----------------- LOAD DATA -----------------
-# Expect a long table with at least: timestamp, house_id, generation, usage, pv, temp, irradiance, wind
-# Adjust the filename/columns if yours differ.
-df = pd.read_parquet(DATA_IN / "multi_home_15min.parquet").sort_values(["house_id", "timestamp"])
+# Load the CSV file we created
+print("Loading data...")
+df = pd.read_csv(DATA_IN / "multi_home_15min.csv")
+print(f"Data shape: {df.shape}")
 
-# ------- choose TARGET now (generation). To train usage later, switch this column -------
-df["target"] = df["generation"].astype("float32")
+# ------- choose TARGET now (PV generation) -------
+print("Processing target...")
+df["target"] = df["pv_kw"].astype("float32")  # Using pv_kw as our target
+df = df.dropna(subset=["target"])  # Remove rows with missing target values
+print(f"Shape after dropping NA: {df.shape}")
 
 # ----------------- FEATURES -----------------
 # integer time index on a fixed cadence
