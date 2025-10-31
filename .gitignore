@@ -44,6 +44,10 @@ __pycache__/
 # If you want to keep raw or interim datasets out of the repo, re-add
 # `data/raw/` or `data/interim/` here. Currently data/ will be tracked.
 
+# Training artifacts (keep out of future commits)
+lightning_logs/
+*.log
+
 # Gurobi / secrets
 grb.lic
 grb.env
